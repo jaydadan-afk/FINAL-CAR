@@ -33,7 +33,7 @@ namespace FINAL_CAR
 
             if (username == "admin" && password == "12345")
             {
-                MessageBox.Show("Welcome Admin!");             
+                MessageBox.Show("Welcome Admin!");
                 new Admin().Show();
                 return;
             }
@@ -62,7 +62,27 @@ namespace FINAL_CAR
             }
 
             MessageBox.Show("Invalid username or password");
-        
-    }
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
