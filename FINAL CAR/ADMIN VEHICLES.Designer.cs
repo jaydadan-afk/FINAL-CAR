@@ -83,6 +83,14 @@
             pictureBox1 = new PictureBox();
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
+            label32 = new Label();
+            label33 = new Label();
+            label34 = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel12.SuspendLayout();
@@ -110,10 +118,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(699, 31);
             label1.Name = "label1";
-            label1.Size = new Size(96, 22);
+            label1.Size = new Size(102, 24);
             label1.TabIndex = 0;
             label1.Text = "VEHICLES";
             label1.Click += label1_Click;
@@ -130,6 +138,14 @@
             // panel3
             // 
             panel3.AutoScroll = true;
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(button1);
+            panel3.Controls.Add(textBox4);
+            panel3.Controls.Add(textBox3);
+            panel3.Controls.Add(textBox2);
+            panel3.Controls.Add(label34);
+            panel3.Controls.Add(label33);
+            panel3.Controls.Add(label32);
             panel3.Controls.Add(panel12);
             panel3.Controls.Add(panel11);
             panel3.Controls.Add(panel10);
@@ -613,7 +629,7 @@
             // 
             comboBox1.Anchor = AnchorStyles.Top;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(537, 109);
+            comboBox1.Location = new Point(630, 109);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(111, 23);
             comboBox1.TabIndex = 3;
@@ -621,10 +637,78 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top;
-            textBox1.Location = new Point(654, 109);
+            textBox1.Location = new Point(747, 109);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(248, 23);
             textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(81, 60);
+            label32.Name = "label32";
+            label32.Size = new Size(36, 15);
+            label32.TabIndex = 9;
+            label32.Text = "Price:";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Location = new Point(78, 96);
+            label33.Name = "label33";
+            label33.Size = new Size(69, 15);
+            label33.TabIndex = 10;
+            label33.Text = "Year Model:";
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(81, 26);
+            label34.Name = "label34";
+            label34.Size = new Size(47, 15);
+            label34.TabIndex = 11;
+            label34.Text = "Vehicle:";
+            label34.Click += label34_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(174, 23);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(131, 23);
+            textBox2.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(174, 60);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(131, 23);
+            textBox3.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(174, 93);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(131, 23);
+            textBox4.TabIndex = 14;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(146, 122);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 15;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(245, 122);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 16;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
             // 
             // VEHICLE
             // 
@@ -730,5 +814,12 @@
         private Label label3;
         private Label label2;
         private PictureBox pictureBox1;
+        private Label label34;
+        private Label label33;
+        private Label label32;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private Button button2;
     }
 }

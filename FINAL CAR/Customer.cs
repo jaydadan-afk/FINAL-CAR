@@ -110,6 +110,12 @@ namespace FINAL_CAR
         {
             AbrirFormInPanel(new CUSTOMER_PROFILE());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+            new Form1().Show();
+        }
     }
 }
  

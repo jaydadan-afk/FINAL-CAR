@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             Slidebar = new Panel();
+            btnLogout = new Button();
             btnPayment = new Button();
             btnBooking = new Button();
             btnCustomer = new Button();
@@ -55,6 +56,7 @@
             // Slidebar
             // 
             Slidebar.BackColor = Color.RosyBrown;
+            Slidebar.Controls.Add(btnLogout);
             Slidebar.Controls.Add(btnPayment);
             Slidebar.Controls.Add(btnBooking);
             Slidebar.Controls.Add(btnCustomer);
@@ -66,6 +68,16 @@
             Slidebar.Name = "Slidebar";
             Slidebar.Size = new Size(200, 611);
             Slidebar.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(22, 23);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(81, 31);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "LogOut";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += button1_Click;
             // 
             // btnPayment
             // 
@@ -247,5 +259,6 @@
         private PictureBox iconClose;
         private Panel panelMain;
         private System.Windows.Forms.Timer sideBarTimer;
+        private Button btnLogout;
     }
 }

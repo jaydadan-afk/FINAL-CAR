@@ -43,6 +43,7 @@
             iconClose = new PictureBox();
             sideBarTimer = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            button1 = new Button();
             Slidebar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconMaximize).BeginInit();
@@ -55,6 +56,7 @@
             // Slidebar
             // 
             Slidebar.BackColor = Color.Silver;
+            Slidebar.Controls.Add(button1);
             Slidebar.Controls.Add(btnProfile);
             Slidebar.Controls.Add(btnPayment);
             Slidebar.Controls.Add(btnBooking);
@@ -72,7 +74,7 @@
             // 
             btnProfile.FlatAppearance.BorderSize = 0;
             btnProfile.FlatStyle = FlatStyle.Flat;
-            btnProfile.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProfile.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProfile.Location = new Point(0, 209);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(197, 58);
@@ -85,7 +87,7 @@
             // 
             btnPayment.FlatAppearance.BorderSize = 0;
             btnPayment.FlatStyle = FlatStyle.Flat;
-            btnPayment.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPayment.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPayment.Location = new Point(0, 273);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(197, 58);
@@ -98,7 +100,7 @@
             // 
             btnBooking.FlatAppearance.BorderSize = 0;
             btnBooking.FlatStyle = FlatStyle.Flat;
-            btnBooking.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBooking.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBooking.Location = new Point(0, 145);
             btnBooking.Name = "btnBooking";
             btnBooking.Size = new Size(197, 58);
@@ -111,7 +113,7 @@
             // 
             btnVehicle.FlatAppearance.BorderSize = 0;
             btnVehicle.FlatStyle = FlatStyle.Flat;
-            btnVehicle.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVehicle.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVehicle.Location = new Point(0, 81);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(197, 58);
@@ -202,6 +204,16 @@
             panel1.Size = new Size(1103, 608);
             panel1.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 30);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Customer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -239,5 +251,6 @@
         private PictureBox iconClose;
         private System.Windows.Forms.Timer sideBarTimer;
         private Panel panel1;
+        private Button button1;
     }
 }
