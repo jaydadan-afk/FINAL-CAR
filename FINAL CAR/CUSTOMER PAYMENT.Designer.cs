@@ -1,6 +1,6 @@
 ﻿namespace FINAL_CAR
 {
-    partial class CUSTOMER_VEHICLE
+    partial class CUSTOMER_PAYMENT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             SuspendLayout();
             // 
-            // CUSTOMER_VEHICLE
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(407, 133);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            // 
+            // CUSTOMER_PAYMENT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1033, 546);
+            ClientSize = new Size(1011, 506);
+            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CUSTOMER_VEHICLE";
-            Text = "CUSTOMER_VEHICLE";
+            Name = "CUSTOMER_PAYMENT";
+            Text = "CUSTOMER_PAYMENT";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

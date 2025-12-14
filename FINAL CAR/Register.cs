@@ -45,7 +45,7 @@ namespace FINAL_CAR
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
             string confirm = txtConfirmPass.Text.Trim();
-            string email = txtEmail.Text.Trim();
+           
 
             if (username == "" || password == "" || confirm == "")
             {

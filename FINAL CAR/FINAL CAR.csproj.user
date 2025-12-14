@@ -10,6 +10,9 @@
     <Compile Update="CUSTOMER BOOKING.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CUSTOMER PAYMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CUSTOMER VEHICLE.cs">
       <SubType>Form</SubType>
     </Compile>
