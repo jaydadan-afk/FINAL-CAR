@@ -12,6 +12,7 @@ namespace FINAL_CAR
 {
     public partial class Admin : Form
     {
+        bool sidebarExpand = true;
         public Admin()
         {
             InitializeComponent();
@@ -45,5 +46,68 @@ namespace FINAL_CAR
         {
             Application.Exit();
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sideBarTimer.Start();
+        }
+
+        private void sideBarTimer_Tick(object sender, EventArgs e)
+        {
+
+            if (sidebarExpand)
+            {
+
+                Slidebar.Width -= 10;
+                if (Slidebar.Width <= Slidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sideBarTimer.Stop();
+                }
+            }
+            else
+            {
+
+                Slidebar.Width += 10;
+                if (Slidebar.Width >= Slidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sideBarTimer.Stop();
+                }
+            }
+        }
+        private void AbrirFormInPanel(Form formHijo)
+        {
+            panelMain.Controls.Clear();
+
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+
+            panelMain.Controls.Add(formHijo);
+            panelMain.Tag = formHijo;
+            formHijo.Show();
+        }
+
+        private void btnVehicle_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new VEHICLE());
+        }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new BOOKINGS());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new CUSTOMERS());
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new PAYMENTS());
+        }   
     }
-}
+    }
+

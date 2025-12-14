@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FINAL_CAR
 {
-    public partial class Customer : Form
+    public partial class CUSTOMERS : Form
     {
-        public Customer()
+        public CUSTOMERS()
         {
             InitializeComponent();
-        }
-
-        private void Customer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

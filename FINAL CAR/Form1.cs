@@ -13,7 +13,7 @@ namespace FINAL_CAR
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Admin().Show();
+            new Register().Show();
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
