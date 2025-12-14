@@ -92,7 +92,7 @@ namespace FINAL_CAR
         private void btnPayment_Click(object sender, EventArgs e)
         {
 
-
+            AbrirFormInPanel(new CUSTOMER_PAYMENT());
 
         }
 
@@ -104,6 +104,11 @@ namespace FINAL_CAR
         private void btnBooking_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new CUSTOMER_BOOKING());
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new CUSTOMER_PROFILE());
         }
     }
 }

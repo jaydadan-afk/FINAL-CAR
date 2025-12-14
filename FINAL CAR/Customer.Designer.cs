@@ -73,19 +73,20 @@
             btnProfile.FlatAppearance.BorderSize = 0;
             btnProfile.FlatStyle = FlatStyle.Flat;
             btnProfile.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnProfile.Location = new Point(-3, 306);
+            btnProfile.Location = new Point(0, 209);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(197, 58);
             btnProfile.TabIndex = 7;
             btnProfile.Text = "Profile";
             btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnPayment
             // 
             btnPayment.FlatAppearance.BorderSize = 0;
             btnPayment.FlatStyle = FlatStyle.Flat;
             btnPayment.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPayment.Location = new Point(0, 242);
+            btnPayment.Location = new Point(0, 273);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(197, 58);
             btnPayment.TabIndex = 6;
@@ -98,7 +99,7 @@
             btnBooking.FlatAppearance.BorderSize = 0;
             btnBooking.FlatStyle = FlatStyle.Flat;
             btnBooking.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBooking.Location = new Point(0, 178);
+            btnBooking.Location = new Point(0, 145);
             btnBooking.Name = "btnBooking";
             btnBooking.Size = new Size(197, 58);
             btnBooking.TabIndex = 5;
@@ -111,7 +112,7 @@
             btnVehicle.FlatAppearance.BorderSize = 0;
             btnVehicle.FlatStyle = FlatStyle.Flat;
             btnVehicle.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVehicle.Location = new Point(0, 114);
+            btnVehicle.Location = new Point(0, 81);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(197, 58);
             btnVehicle.TabIndex = 2;
@@ -134,6 +135,7 @@
             // 
             // iconMaximize
             // 
+            iconMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconMaximize.Image = (Image)resources.GetObject("iconMaximize.Image");
             iconMaximize.Location = new Point(1038, 12);
             iconMaximize.Name = "iconMaximize";
@@ -155,6 +157,7 @@
             // 
             // iconRestorer
             // 
+            iconRestorer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconRestorer.Image = (Image)resources.GetObject("iconRestorer.Image");
             iconRestorer.Location = new Point(1007, 12);
             iconRestorer.Name = "iconRestorer";
@@ -166,6 +169,7 @@
             // 
             // iconMinimize
             // 
+            iconMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconMinimize.Image = (Image)resources.GetObject("iconMinimize.Image");
             iconMinimize.Location = new Point(976, 12);
             iconMinimize.Name = "iconMinimize";
@@ -176,6 +180,7 @@
             // 
             // iconClose
             // 
+            iconClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconClose.Image = (Image)resources.GetObject("iconClose.Image");
             iconClose.Location = new Point(1069, 12);
             iconClose.Name = "iconClose";
