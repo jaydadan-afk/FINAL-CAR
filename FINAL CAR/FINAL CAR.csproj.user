@@ -4,25 +4,28 @@
     <Compile Update="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="BOOKINGS.cs">
+    <Compile Update="ADMIN BOOKING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CUSTOMER VEHICLE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CUSTOMERS.cs">
+    <Compile Update="ADMIN CUSTOMER.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PAYMENTS.cs">
+    <Compile Update="ADMIN PAYMENT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="VEHICLE.cs">
+    <Compile Update="ADMIN VEHICLES.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

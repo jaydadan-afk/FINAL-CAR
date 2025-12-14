@@ -111,7 +111,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(468, 27);
+            label1.Location = new Point(699, 31);
             label1.Name = "label1";
             label1.Size = new Size(96, 22);
             label1.TabIndex = 0;
@@ -613,7 +613,7 @@
             // 
             comboBox1.Anchor = AnchorStyles.Top;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(351, 109);
+            comboBox1.Location = new Point(537, 109);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(111, 23);
             comboBox1.TabIndex = 3;
@@ -621,7 +621,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top;
-            textBox1.Location = new Point(468, 109);
+            textBox1.Location = new Point(654, 109);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(248, 23);
             textBox1.TabIndex = 2;
@@ -635,6 +635,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "VEHICLE";
             Text = "VEHICLE";
+            Load += VEHICLE_Load;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
