@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,6 +77,35 @@ namespace FINAL_CAR
                 }
             }
         }
-    }
-    }
+        private void AbrirFormInPanel(Form formHijo)
+        {
+            panel1.Controls.Clear();
 
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+
+            panel1.Controls.Add(formHijo);
+            panel1.Tag = formHijo;
+            formHijo.Show();
+        }
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btnVehicle_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new CUSTOMER_VEHICLE());
+        }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new CUSTOMER_BOOKING());
+        }
+    }
+}
+ 
+ 

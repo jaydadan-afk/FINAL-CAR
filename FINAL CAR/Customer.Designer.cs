@@ -91,6 +91,7 @@
             btnPayment.TabIndex = 6;
             btnPayment.Text = "Payment";
             btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Click += btnPayment_Click;
             // 
             // btnBooking
             // 
@@ -103,6 +104,7 @@
             btnBooking.TabIndex = 5;
             btnBooking.Text = "My Booking";
             btnBooking.UseVisualStyleBackColor = true;
+            btnBooking.Click += btnBooking_Click;
             // 
             // btnVehicle
             // 
@@ -115,6 +117,7 @@
             btnVehicle.TabIndex = 2;
             btnVehicle.Text = "Vehicle";
             btnVehicle.UseVisualStyleBackColor = true;
+            btnVehicle.Click += btnVehicle_Click;
             // 
             // panel2
             // 
