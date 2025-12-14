@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             txtConfirmPass = new TextBox();
@@ -38,7 +39,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(584, 227);
+            txtUsername.Location = new Point(1071, 332);
             txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(151, 27);
@@ -47,7 +48,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(584, 284);
+            txtPassword.Location = new Point(1071, 389);
             txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(151, 27);
@@ -56,7 +57,7 @@
             // 
             // txtConfirmPass
             // 
-            txtConfirmPass.Location = new Point(584, 348);
+            txtConfirmPass.Location = new Point(1071, 453);
             txtConfirmPass.Margin = new Padding(3, 4, 3, 4);
             txtConfirmPass.Name = "txtConfirmPass";
             txtConfirmPass.Size = new Size(151, 27);
@@ -65,7 +66,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(584, 405);
+            txtEmail.Location = new Point(1071, 510);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(151, 27);
@@ -74,7 +75,7 @@
             // 
             // btnSignup
             // 
-            btnSignup.Location = new Point(616, 460);
+            btnSignup.Location = new Point(1103, 565);
             btnSignup.Margin = new Padding(3, 4, 3, 4);
             btnSignup.Name = "btnSignup";
             btnSignup.Size = new Size(86, 31);
@@ -85,7 +86,7 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(440, 532);
+            btnBack.Location = new Point(927, 637);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(86, 31);
@@ -98,6 +99,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1351, 743);
             Controls.Add(btnBack);
             Controls.Add(btnSignup);
@@ -105,8 +107,10 @@
             Controls.Add(txtConfirmPass);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Register";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();
