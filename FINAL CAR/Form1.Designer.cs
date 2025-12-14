@@ -37,10 +37,9 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(134, 437);
-            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Location = new Point(117, 328);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(86, 44);
+            btnLogin.Size = new Size(75, 33);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Log in";
             btnLogin.UseVisualStyleBackColor = true;
@@ -48,45 +47,43 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(104, 301);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(91, 226);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(140, 27);
+            txtUsername.Size = new Size(123, 23);
             txtUsername.TabIndex = 1;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(104, 364);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(91, 273);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(140, 27);
+            txtPassword.Size = new Size(123, 23);
             txtPassword.TabIndex = 2;
+            txtPassword.UseSystemPasswordChar = true;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Cursor = Cursors.Hand;
-            label1.Location = new Point(180, 546);
+            label1.Location = new Point(207, 410);
             label1.Name = "label1";
-            label1.Size = new Size(63, 20);
+            label1.Size = new Size(49, 15);
             label1.TabIndex = 3;
             label1.Text = "Register";
             label1.Click += label1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1351, 743);
+            ClientSize = new Size(1182, 557);
             Controls.Add(label1);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(btnLogin);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -35,17 +35,11 @@ namespace FINAL_CAR
 
         }
 
-        private void txtEmail_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSignup_Click_1(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
             string confirm = txtConfirmPass.Text.Trim();
-            string email = txtEmail.Text.Trim();
 
             if (username == "" || password == "" || confirm == "")
             {
@@ -109,7 +103,7 @@ namespace FINAL_CAR
             MessageBox.Show("Registration successful!");
 
             this.Hide();
-            new Customer().Show();
+            new Form1().Show();
         }
 
 

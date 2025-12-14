@@ -56,7 +56,7 @@ namespace FINAL_CAR
                     MessageBox.Show("Login successful!");
 
                     this.Hide();
-                    new Register().Show();
+                    new Customer().Show();
                     return;
                 }
             }

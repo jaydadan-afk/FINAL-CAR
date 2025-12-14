@@ -107,7 +107,13 @@ namespace FINAL_CAR
         private void btnPayment_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new PAYMENTS());
-        }   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
+        }
     }
-    }
+}
 
