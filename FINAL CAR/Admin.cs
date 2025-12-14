@@ -107,7 +107,22 @@ namespace FINAL_CAR
         private void btnPayment_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new PAYMENTS());
-        }   
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Slidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
 

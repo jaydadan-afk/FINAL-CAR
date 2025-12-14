@@ -119,5 +119,25 @@ namespace FINAL_CAR
             this.Hide();
             new Form1().Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
