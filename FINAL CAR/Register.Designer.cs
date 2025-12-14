@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             txtConfirmPass = new TextBox();
@@ -38,41 +39,46 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(511, 170);
+            txtUsername.Location = new Point(1071, 332);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(133, 23);
+            txtUsername.Size = new Size(151, 27);
             txtUsername.TabIndex = 0;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(511, 213);
+            txtPassword.Location = new Point(1071, 389);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(133, 23);
+            txtPassword.Size = new Size(151, 27);
             txtPassword.TabIndex = 1;
             txtPassword.TextChanged += txtPassword_TextChanged_1;
             // 
             // txtConfirmPass
             // 
-            txtConfirmPass.Location = new Point(511, 261);
+            txtConfirmPass.Location = new Point(1071, 453);
+            txtConfirmPass.Margin = new Padding(3, 4, 3, 4);
             txtConfirmPass.Name = "txtConfirmPass";
-            txtConfirmPass.Size = new Size(133, 23);
+            txtConfirmPass.Size = new Size(151, 27);
             txtConfirmPass.TabIndex = 2;
             txtConfirmPass.TextChanged += txtConfirmPass_TextChanged_1;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(511, 304);
+            txtEmail.Location = new Point(1071, 510);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(133, 23);
+            txtEmail.Size = new Size(151, 27);
             txtEmail.TabIndex = 3;
             txtEmail.TextChanged += txtEmail_TextChanged_1;
             // 
             // btnSignup
             // 
-            btnSignup.Location = new Point(539, 345);
+            btnSignup.Location = new Point(1103, 565);
+            btnSignup.Margin = new Padding(3, 4, 3, 4);
             btnSignup.Name = "btnSignup";
-            btnSignup.Size = new Size(75, 23);
+            btnSignup.Size = new Size(86, 31);
             btnSignup.TabIndex = 4;
             btnSignup.Text = "Signup";
             btnSignup.UseVisualStyleBackColor = true;
@@ -80,9 +86,10 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(385, 399);
+            btnBack.Location = new Point(927, 637);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(86, 31);
             btnBack.TabIndex = 5;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -90,16 +97,20 @@
             // 
             // Register
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1351, 743);
             Controls.Add(btnBack);
             Controls.Add(btnSignup);
             Controls.Add(txtEmail);
             Controls.Add(txtConfirmPass);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Register";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();
