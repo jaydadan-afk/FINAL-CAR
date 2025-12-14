@@ -32,7 +32,6 @@
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             txtConfirmPass = new TextBox();
-            txtEmail = new TextBox();
             btnSignup = new Button();
             btnBack = new Button();
             label1 = new Label();
@@ -47,10 +46,10 @@
             // 
             txtUsername.BackColor = Color.Gainsboro;
             txtUsername.Font = new Font("Segoe UI", 10.2F);
-            txtUsername.Location = new Point(927, 239);
+            txtUsername.Location = new Point(938, 243);
             txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(313, 30);
+            txtUsername.Size = new Size(281, 30);
             txtUsername.TabIndex = 0;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
@@ -76,24 +75,13 @@
             txtConfirmPass.TabIndex = 2;
             txtConfirmPass.TextChanged += txtConfirmPass_TextChanged_1;
             // 
-            // txtEmail
-            // 
-            txtEmail.BackColor = Color.Gainsboro;
-            txtEmail.Font = new Font("Segoe UI", 10.2F);
-            txtEmail.Location = new Point(984, 430);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(281, 30);
-            txtEmail.TabIndex = 3;
-            txtEmail.TextChanged += txtEmail_TextChanged_1;
-            // 
             // btnSignup
             // 
             btnSignup.BackColor = Color.RoyalBlue;
             btnSignup.Cursor = Cursors.Hand;
             btnSignup.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnSignup.ForeColor = Color.White;
-            btnSignup.Location = new Point(1025, 513);
+            btnSignup.Location = new Point(1025, 455);
             btnSignup.Margin = new Padding(3, 4, 3, 4);
             btnSignup.Name = "btnSignup";
             btnSignup.Size = new Size(214, 58);
@@ -178,7 +166,6 @@
             Controls.Add(label1);
             Controls.Add(btnBack);
             Controls.Add(btnSignup);
-            Controls.Add(txtEmail);
             Controls.Add(txtConfirmPass);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
@@ -199,7 +186,6 @@
         private TextBox txtUsername;
         private TextBox txtPassword;
         private TextBox txtConfirmPass;
-        private TextBox txtEmail;
         private Button btnSignup;
         private Button btnBack;
         private Label label1;
