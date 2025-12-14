@@ -134,8 +134,9 @@
             // 
             // iconMaximize
             // 
+            iconMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconMaximize.Image = (Image)resources.GetObject("iconMaximize.Image");
-            iconMaximize.Location = new Point(1038, 12);
+            iconMaximize.Location = new Point(1038, 11);
             iconMaximize.Name = "iconMaximize";
             iconMaximize.Size = new Size(25, 25);
             iconMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -155,8 +156,9 @@
             // 
             // iconRestorer
             // 
+            iconRestorer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconRestorer.Image = (Image)resources.GetObject("iconRestorer.Image");
-            iconRestorer.Location = new Point(1007, 12);
+            iconRestorer.Location = new Point(1038, 12);
             iconRestorer.Name = "iconRestorer";
             iconRestorer.Size = new Size(25, 25);
             iconRestorer.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -166,8 +168,9 @@
             // 
             // iconMinimize
             // 
+            iconMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconMinimize.Image = (Image)resources.GetObject("iconMinimize.Image");
-            iconMinimize.Location = new Point(976, 12);
+            iconMinimize.Location = new Point(1007, 11);
             iconMinimize.Name = "iconMinimize";
             iconMinimize.Size = new Size(25, 25);
             iconMinimize.TabIndex = 3;
@@ -176,8 +179,9 @@
             // 
             // iconClose
             // 
+            iconClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconClose.Image = (Image)resources.GetObject("iconClose.Image");
-            iconClose.Location = new Point(1069, 12);
+            iconClose.Location = new Point(1069, 11);
             iconClose.Name = "iconClose";
             iconClose.Size = new Size(25, 25);
             iconClose.TabIndex = 2;

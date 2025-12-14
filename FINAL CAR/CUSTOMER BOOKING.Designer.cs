@@ -170,9 +170,9 @@
             // pictureBoxLicense
             // 
             pictureBoxLicense.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxLicense.Location = new Point(609, 264);
+            pictureBoxLicense.Location = new Point(688, 265);
             pictureBoxLicense.Name = "pictureBoxLicense";
-            pictureBoxLicense.Size = new Size(328, 170);
+            pictureBoxLicense.Size = new Size(217, 170);
             pictureBoxLicense.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLicense.TabIndex = 17;
             pictureBoxLicense.TabStop = false;
@@ -190,7 +190,7 @@
             // btnUpload
             // 
             btnUpload.BackgroundImageLayout = ImageLayout.None;
-            btnUpload.Location = new Point(718, 456);
+            btnUpload.Location = new Point(744, 466);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(120, 37);
             btnUpload.TabIndex = 19;
@@ -217,7 +217,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(180, 356);
+            btnConfirm.Location = new Point(183, 335);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(120, 37);
             btnConfirm.TabIndex = 23;
