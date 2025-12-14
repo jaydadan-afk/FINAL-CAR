@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             txtConfirmPass = new TextBox();
-            txtEmail = new TextBox();
             btnSignup = new Button();
             btnBack = new Button();
             SuspendLayout();
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(511, 170);
+            txtUsername.Location = new Point(937, 249);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(133, 23);
             txtUsername.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(511, 213);
+            txtPassword.Location = new Point(937, 292);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(133, 23);
             txtPassword.TabIndex = 1;
@@ -54,23 +54,15 @@
             // 
             // txtConfirmPass
             // 
-            txtConfirmPass.Location = new Point(511, 261);
+            txtConfirmPass.Location = new Point(937, 340);
             txtConfirmPass.Name = "txtConfirmPass";
             txtConfirmPass.Size = new Size(133, 23);
             txtConfirmPass.TabIndex = 2;
             txtConfirmPass.TextChanged += txtConfirmPass_TextChanged_1;
             // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(511, 304);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(133, 23);
-            txtEmail.TabIndex = 3;
-            txtEmail.TextChanged += txtEmail_TextChanged_1;
-            // 
             // btnSignup
             // 
-            btnSignup.Location = new Point(539, 345);
+            btnSignup.Location = new Point(965, 424);
             btnSignup.Name = "btnSignup";
             btnSignup.Size = new Size(75, 23);
             btnSignup.TabIndex = 4;
@@ -80,7 +72,7 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(385, 399);
+            btnBack.Location = new Point(811, 478);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 5;
@@ -92,14 +84,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1182, 557);
             Controls.Add(btnBack);
             Controls.Add(btnSignup);
-            Controls.Add(txtEmail);
             Controls.Add(txtConfirmPass);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Register";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();
@@ -110,7 +104,6 @@
         private TextBox txtUsername;
         private TextBox txtPassword;
         private TextBox txtConfirmPass;
-        private TextBox txtEmail;
         private Button btnSignup;
         private Button btnBack;
     }
