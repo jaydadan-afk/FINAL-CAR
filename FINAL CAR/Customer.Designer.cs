@@ -73,7 +73,7 @@
             btnProfile.FlatAppearance.BorderSize = 0;
             btnProfile.FlatStyle = FlatStyle.Flat;
             btnProfile.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnProfile.Location = new Point(-3, 306);
+            btnProfile.Location = new Point(3, 222);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(197, 58);
             btnProfile.TabIndex = 7;
@@ -85,7 +85,7 @@
             btnPayment.FlatAppearance.BorderSize = 0;
             btnPayment.FlatStyle = FlatStyle.Flat;
             btnPayment.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPayment.Location = new Point(0, 242);
+            btnPayment.Location = new Point(3, 158);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(197, 58);
             btnPayment.TabIndex = 6;
@@ -97,7 +97,7 @@
             btnBooking.FlatAppearance.BorderSize = 0;
             btnBooking.FlatStyle = FlatStyle.Flat;
             btnBooking.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBooking.Location = new Point(0, 178);
+            btnBooking.Location = new Point(3, 286);
             btnBooking.Name = "btnBooking";
             btnBooking.Size = new Size(197, 58);
             btnBooking.TabIndex = 5;
@@ -109,7 +109,7 @@
             btnVehicle.FlatAppearance.BorderSize = 0;
             btnVehicle.FlatStyle = FlatStyle.Flat;
             btnVehicle.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVehicle.Location = new Point(0, 114);
+            btnVehicle.Location = new Point(0, 94);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(197, 58);
             btnVehicle.TabIndex = 2;
