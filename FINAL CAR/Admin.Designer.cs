@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             Slidebar = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnPayment = new Button();
+            btnBooking = new Button();
+            btnCustomer = new Button();
+            btnVehicle = new Button();
             panel2 = new Panel();
             iconRestorer = new PictureBox();
             btnMenu = new PictureBox();
             iconMinimize = new PictureBox();
             iconMaximize = new PictureBox();
             iconClose = new PictureBox();
-            panel1 = new Panel();
+            panelMain = new Panel();
+            sideBarTimer = new System.Windows.Forms.Timer(components);
             Slidebar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconRestorer).BeginInit();
@@ -53,63 +55,71 @@
             // Slidebar
             // 
             Slidebar.BackColor = Color.RosyBrown;
-            Slidebar.Controls.Add(button4);
-            Slidebar.Controls.Add(button3);
-            Slidebar.Controls.Add(button2);
-            Slidebar.Controls.Add(button1);
+            Slidebar.Controls.Add(btnPayment);
+            Slidebar.Controls.Add(btnBooking);
+            Slidebar.Controls.Add(btnCustomer);
+            Slidebar.Controls.Add(btnVehicle);
             Slidebar.Dock = DockStyle.Left;
             Slidebar.Location = new Point(0, 0);
+            Slidebar.MaximumSize = new Size(200, 611);
+            Slidebar.MinimumSize = new Size(61, 611);
             Slidebar.Name = "Slidebar";
             Slidebar.Size = new Size(200, 611);
             Slidebar.TabIndex = 0;
             // 
-            // button4
+            // btnPayment
             // 
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(9, 294);
-            button4.Name = "button4";
-            button4.Size = new Size(188, 56);
-            button4.TabIndex = 5;
-            button4.Text = "Payment";
-            button4.UseVisualStyleBackColor = true;
+            btnPayment.FlatAppearance.BorderSize = 0;
+            btnPayment.FlatStyle = FlatStyle.Flat;
+            btnPayment.Location = new Point(9, 294);
+            btnPayment.Name = "btnPayment";
+            btnPayment.Size = new Size(188, 56);
+            btnPayment.TabIndex = 5;
+            btnPayment.Text = "Payment";
+            btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Click += btnPayment_Click;
             // 
-            // button3
+            // btnBooking
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(9, 170);
-            button3.Name = "button3";
-            button3.Size = new Size(188, 56);
-            button3.TabIndex = 4;
-            button3.Text = "Booking";
-            button3.UseVisualStyleBackColor = true;
+            btnBooking.FlatAppearance.BorderSize = 0;
+            btnBooking.FlatStyle = FlatStyle.Flat;
+            btnBooking.Image = (Image)resources.GetObject("btnBooking.Image");
+            btnBooking.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBooking.Location = new Point(9, 170);
+            btnBooking.Name = "btnBooking";
+            btnBooking.Size = new Size(188, 56);
+            btnBooking.TabIndex = 4;
+            btnBooking.Text = "Booking";
+            btnBooking.UseVisualStyleBackColor = true;
+            btnBooking.Click += btnBooking_Click;
             // 
-            // button2
+            // btnCustomer
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(9, 232);
-            button2.Name = "button2";
-            button2.Size = new Size(188, 56);
-            button2.TabIndex = 3;
-            button2.Text = "Customer";
-            button2.UseVisualStyleBackColor = true;
+            btnCustomer.FlatAppearance.BorderSize = 0;
+            btnCustomer.FlatStyle = FlatStyle.Flat;
+            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
+            btnCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCustomer.Location = new Point(9, 232);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(188, 56);
+            btnCustomer.TabIndex = 3;
+            btnCustomer.Text = "Customer";
+            btnCustomer.UseVisualStyleBackColor = true;
+            btnCustomer.Click += btnCustomer_Click;
             // 
-            // button1
+            // btnVehicle
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(9, 108);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 56);
-            button1.TabIndex = 2;
-            button1.Text = "Vehicle";
-            button1.UseVisualStyleBackColor = true;
+            btnVehicle.FlatAppearance.BorderSize = 0;
+            btnVehicle.FlatStyle = FlatStyle.Flat;
+            btnVehicle.Image = (Image)resources.GetObject("btnVehicle.Image");
+            btnVehicle.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVehicle.Location = new Point(9, 108);
+            btnVehicle.Name = "btnVehicle";
+            btnVehicle.Size = new Size(188, 56);
+            btnVehicle.TabIndex = 2;
+            btnVehicle.Text = "Vehicle";
+            btnVehicle.UseVisualStyleBackColor = true;
+            btnVehicle.Click += btnVehicle_Click;
             // 
             // panel2
             // 
@@ -146,6 +156,7 @@
             btnMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMenu.TabIndex = 2;
             btnMenu.TabStop = false;
+            btnMenu.Click += btnMenu_Click;
             // 
             // iconMinimize
             // 
@@ -186,20 +197,25 @@
             iconClose.TabStop = false;
             iconClose.Click += iconClose_Click;
             // 
-            // panel1
+            // panelMain
             // 
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(200, 43);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1084, 568);
-            panel1.TabIndex = 2;
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(200, 43);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1084, 568);
+            panelMain.TabIndex = 2;
+            // 
+            // sideBarTimer
+            // 
+            sideBarTimer.Interval = 10;
+            sideBarTimer.Tick += sideBarTimer_Tick;
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1284, 611);
-            Controls.Add(panel1);
+            Controls.Add(panelMain);
             Controls.Add(panel2);
             Controls.Add(Slidebar);
             FormBorderStyle = FormBorderStyle.None;
@@ -219,16 +235,17 @@
         #endregion
 
         private Panel Slidebar;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnPayment;
+        private Button btnBooking;
+        private Button btnCustomer;
+        private Button btnVehicle;
         private Panel panel2;
         private PictureBox btnMenu;
         private PictureBox iconRestorer;
         private PictureBox iconMinimize;
         private PictureBox iconMaximize;
         private PictureBox iconClose;
-        private Panel panel1;
+        private Panel panelMain;
+        private System.Windows.Forms.Timer sideBarTimer;
     }
 }

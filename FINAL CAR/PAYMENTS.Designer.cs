@@ -1,6 +1,6 @@
 ﻿namespace FINAL_CAR
 {
-    partial class Customer
+    partial class PAYMENTS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel2 = new Panel();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // panel1
+            // label1
             // 
-            panel1.BackColor = Color.Silver;
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 611);
-            panel1.TabIndex = 0;
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(399, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 20);
+            label1.TabIndex = 0;
+            label1.Text = "PAYMENT";
             // 
-            // panel2
-            // 
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(200, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1084, 100);
-            panel2.TabIndex = 1;
-            // 
-            // Customer
+            // PAYMENTS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 611);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            ClientSize = new Size(885, 481);
+            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Customer";
-            Text = "Customer";
-            Load += Customer_Load;
+            Name = "PAYMENTS";
+            Text = "PAYMENTS";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
+        private Label label1;
     }
 }
