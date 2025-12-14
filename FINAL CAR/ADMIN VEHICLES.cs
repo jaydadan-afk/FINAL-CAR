@@ -31,5 +31,10 @@ namespace FINAL_CAR
         {
 
         }
+
+        private void VEHICLE_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
