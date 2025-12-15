@@ -74,42 +74,6 @@ namespace FINAL_CAR
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            if (dgvPayment.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Please select a payment to confirm.",
-                    "No Selection",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-
-            DataGridViewRow row = dgvPayment.SelectedRows[0];
-
-            if (row.Cells["Status"].Value.ToString() == "Paid")
-            {
-                MessageBox.Show("This payment is already paid.",
-                    "Info",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                return;
-            }
-
-            DialogResult result = MessageBox.Show(
-                "Confirm payment?",
-                "Payment Confirmation",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                row.Cells["Status"].Value = "Paid";
-
-                MessageBox.Show(
-                    "Payment successfully confirmed!",
-                    "Success",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
         }
 
         private void CUSTOMER_PAYMENT_Load_1(object sender, EventArgs e)
@@ -119,7 +83,7 @@ namespace FINAL_CAR
 
         private void btnConfirmPayment_Click(object sender, EventArgs e)
         {
-            if (dgvPayment.SelectedRows.Count == 0)
+            if (dgvPayment.CurrentRow == null)
             {
                 MessageBox.Show("Please select a booking to confirm payment.",
                                 "No Selection",
@@ -128,8 +92,7 @@ namespace FINAL_CAR
                 return;
             }
 
-            DataGridViewRow row = dgvPayment.SelectedRows[0];
-
+            DataGridViewRow row = dgvPayment.CurrentRow;
 
             if (row.Cells["Status"].Value.ToString() == "Paid")
             {
@@ -140,21 +103,22 @@ namespace FINAL_CAR
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Confirm payment for this booking?",
-                                                  "Payment Confirmation",
-                                                  MessageBoxButtons.YesNo,
-                                                  MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(
+                "Confirm payment for this booking?",
+                "Payment Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
                 row.Cells["Status"].Value = "Paid";
+
                 MessageBox.Show("Payment successfully confirmed!",
                                 "Success",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
-
         }
-
         private void dgvPayment_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -40,10 +40,7 @@
             datePickup = new DateTimePicker();
             label8 = new Label();
             dateTime = new DateTimePicker();
-            pictureBoxLicense = new PictureBox();
             label9 = new Label();
-            btnUpload = new Button();
-            label10 = new Label();
             comboCar = new ComboBox();
             btnConfirm = new Button();
             txtAddress = new TextBox();
@@ -51,23 +48,22 @@
             txtAmount = new TextBox();
             label11 = new Label();
             label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLicense).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericDays).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(156, 9);
             label1.Name = "label1";
-            label1.Size = new Size(80, 23);
+            label1.Size = new Size(102, 29);
             label1.TabIndex = 0;
             label1.Text = "BOOKING";
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(156, 97);
+            txtCustomerName.Location = new Point(253, 90);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(202, 23);
             txtCustomerName.TabIndex = 1;
@@ -76,15 +72,16 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(104, 105);
+            label2.Font = new Font("Arial", 11.25F);
+            label2.Location = new Point(181, 91);
             label2.Name = "label2";
-            label2.Size = new Size(45, 15);
+            label2.Size = new Size(55, 17);
             label2.TabIndex = 2;
             label2.Text = "Name :";
             // 
             // txtContact
             // 
-            txtContact.Location = new Point(156, 143);
+            txtContact.Location = new Point(253, 136);
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(202, 23);
             txtContact.TabIndex = 3;
@@ -93,15 +90,16 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(108, 193);
+            label3.Font = new Font("Arial", 11.25F);
+            label3.Location = new Point(185, 179);
             label3.Name = "label3";
-            label3.Size = new Size(42, 15);
+            label3.Size = new Size(53, 17);
             label3.TabIndex = 4;
             label3.Text = "Email :";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(156, 190);
+            txtEmail.Location = new Point(253, 183);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(202, 23);
             txtEmail.TabIndex = 5;
@@ -110,27 +108,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(102, 151);
+            label4.Font = new Font("Arial", 11.25F);
+            label4.Location = new Point(179, 137);
             label4.Name = "label4";
-            label4.Size = new Size(47, 15);
+            label4.Size = new Size(58, 17);
             label4.TabIndex = 7;
             label4.Text = "Phone :";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(76, 328);
+            label6.Font = new Font("Arial", 11.25F);
+            label6.Location = new Point(164, 280);
             label6.Name = "label6";
-            label6.Size = new Size(62, 15);
+            label6.Size = new Size(81, 17);
             label6.TabIndex = 12;
             label6.Text = "Select Car:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(102, 243);
+            label7.Font = new Font("Arial", 11.25F);
+            label7.Location = new Point(179, 229);
             label7.Name = "label7";
-            label7.Size = new Size(48, 15);
+            label7.Size = new Size(62, 17);
             label7.TabIndex = 13;
             label7.Text = "Adress :";
             // 
@@ -146,9 +147,10 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(611, 97);
+            label8.Font = new Font("Arial", 11.25F);
+            label8.Location = new Point(593, 91);
             label8.Name = "label8";
-            label8.Size = new Size(76, 15);
+            label8.Size = new Size(95, 17);
             label8.TabIndex = 15;
             label8.Text = "Pickup Date :";
             // 
@@ -161,49 +163,20 @@
             dateTime.TabIndex = 16;
             dateTime.ValueChanged += dateTime_ValueChanged;
             // 
-            // pictureBoxLicense
-            // 
-            pictureBoxLicense.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxLicense.Location = new Point(611, 263);
-            pictureBoxLicense.Name = "pictureBoxLicense";
-            pictureBoxLicense.Size = new Size(328, 170);
-            pictureBoxLicense.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxLicense.TabIndex = 17;
-            pictureBoxLicense.TabStop = false;
-            // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(611, 146);
+            label9.Font = new Font("Arial", 11.25F);
+            label9.Location = new Point(593, 140);
             label9.Name = "label9";
-            label9.Size = new Size(78, 15);
+            label9.Size = new Size(96, 17);
             label9.TabIndex = 18;
             label9.Text = "Pickup Time :";
-            // 
-            // btnUpload
-            // 
-            btnUpload.BackgroundImageLayout = ImageLayout.None;
-            btnUpload.Location = new Point(714, 457);
-            btnUpload.Name = "btnUpload";
-            btnUpload.Size = new Size(120, 37);
-            btnUpload.TabIndex = 19;
-            btnUpload.Text = "Upload ";
-            btnUpload.UseVisualStyleBackColor = true;
-            btnUpload.Click += btnUpload_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(611, 245);
-            label10.Name = "label10";
-            label10.Size = new Size(150, 15);
-            label10.TabIndex = 21;
-            label10.Text = "Upload your driver license: ";
             // 
             // comboCar
             // 
             comboCar.FormattingEnabled = true;
-            comboCar.Location = new Point(156, 328);
+            comboCar.Location = new Point(253, 279);
             comboCar.Name = "comboCar";
             comboCar.Size = new Size(202, 23);
             comboCar.TabIndex = 22;
@@ -211,7 +184,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(172, 392);
+            btnConfirm.Location = new Point(737, 315);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(120, 37);
             btnConfirm.TabIndex = 23;
@@ -221,7 +194,7 @@
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(156, 237);
+            txtAddress.Location = new Point(253, 230);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(202, 23);
             txtAddress.TabIndex = 24;
@@ -229,7 +202,7 @@
             // 
             // numericDays
             // 
-            numericDays.Location = new Point(156, 284);
+            numericDays.Location = new Point(703, 193);
             numericDays.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
             numericDays.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericDays.Name = "numericDays";
@@ -240,7 +213,8 @@
             // 
             // txtAmount
             // 
-            txtAmount.Location = new Point(703, 185);
+            txtAmount.ForeColor = Color.Red;
+            txtAmount.Location = new Point(703, 245);
             txtAmount.Name = "txtAmount";
             txtAmount.Size = new Size(202, 23);
             txtAmount.TabIndex = 26;
@@ -248,18 +222,20 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(611, 185);
+            label11.Font = new Font("Arial", 11.25F);
+            label11.Location = new Point(626, 246);
             label11.Name = "label11";
-            label11.Size = new Size(54, 15);
+            label11.Size = new Size(62, 17);
             label11.TabIndex = 27;
             label11.Text = "Amount:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(76, 286);
+            label5.Font = new Font("Arial", 11.25F);
+            label5.Location = new Point(597, 195);
             label5.Name = "label5";
-            label5.Size = new Size(74, 15);
+            label5.Size = new Size(96, 17);
             label5.TabIndex = 28;
             label5.Text = " Rental Days:";
             // 
@@ -275,10 +251,7 @@
             Controls.Add(txtAddress);
             Controls.Add(btnConfirm);
             Controls.Add(comboCar);
-            Controls.Add(label10);
-            Controls.Add(btnUpload);
             Controls.Add(label9);
-            Controls.Add(pictureBoxLicense);
             Controls.Add(dateTime);
             Controls.Add(label8);
             Controls.Add(datePickup);
@@ -295,7 +268,6 @@
             Name = "CUSTOMER_BOOKING";
             Text = "CUSTOMER_BOOKING";
             Load += CUSTOMER_BOOKING_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLicense).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericDays).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -315,10 +287,7 @@
         private DateTimePicker datePickup;
         private Label label8;
         private DateTimePicker dateTime;
-        private PictureBox pictureBoxLicense;
         private Label label9;
-        private Button btnUpload;
-        private Label label10;
         private ComboBox comboCar;
         private Button btnConfirm;
         private TextBox txtAddress;

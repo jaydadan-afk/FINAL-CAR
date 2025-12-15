@@ -16,5 +16,15 @@ namespace FINAL_CAR
         {
             InitializeComponent();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flpVehicles_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
