@@ -39,17 +39,18 @@
             label4 = new Label();
             btnEdit = new Button();
             btnSave = new Button();
-            btnBooking = new Button();
             panel1 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(183, 83);
+            txtCustomerName.BackColor = SystemColors.ControlLight;
+            txtCustomerName.BorderStyle = BorderStyle.None;
+            txtCustomerName.Location = new Point(181, 75);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.ReadOnly = true;
-            txtCustomerName.Size = new Size(156, 23);
+            txtCustomerName.Size = new Size(156, 16);
             txtCustomerName.TabIndex = 0;
             txtCustomerName.TextChanged += txtCustomerName_TextChanged;
             // 
@@ -57,7 +58,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(51, 86);
+            label1.Location = new Point(49, 78);
             label1.Name = "label1";
             label1.Size = new Size(103, 20);
             label1.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(58, 136);
+            label2.Location = new Point(56, 128);
             label2.Name = "label2";
             label2.Size = new Size(96, 20);
             label2.TabIndex = 2;
@@ -75,17 +76,20 @@
             // 
             // txtNumber
             // 
-            txtNumber.Location = new Point(183, 136);
+            txtNumber.BackColor = SystemColors.ControlLight;
+            txtNumber.BorderStyle = BorderStyle.None;
+            txtNumber.Location = new Point(181, 128);
             txtNumber.Name = "txtNumber";
             txtNumber.ReadOnly = true;
-            txtNumber.Size = new Size(156, 23);
+            txtNumber.Size = new Size(156, 16);
             txtNumber.TabIndex = 3;
+            txtNumber.TextChanged += txtNumber_TextChanged;
             // 
             // DA
             // 
             DA.AutoSize = true;
             DA.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DA.Location = new Point(110, 186);
+            DA.Location = new Point(103, 175);
             DA.Name = "DA";
             DA.Size = new Size(44, 20);
             DA.TabIndex = 4;
@@ -93,17 +97,20 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(183, 187);
+            txtEmail.BackColor = SystemColors.ControlLight;
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.Location = new Point(181, 179);
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
-            txtEmail.Size = new Size(156, 23);
+            txtEmail.Size = new Size(156, 16);
             txtEmail.TabIndex = 5;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(105, 250);
+            label3.Location = new Point(103, 226);
             label3.Name = "label3";
             label3.Size = new Size(49, 20);
             label3.TabIndex = 6;
@@ -111,11 +118,14 @@
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(183, 250);
+            txtAddress.BackColor = SystemColors.ControlLight;
+            txtAddress.BorderStyle = BorderStyle.None;
+            txtAddress.Location = new Point(181, 230);
             txtAddress.Name = "txtAddress";
             txtAddress.ReadOnly = true;
-            txtAddress.Size = new Size(156, 23);
+            txtAddress.Size = new Size(156, 16);
             txtAddress.TabIndex = 7;
+            txtAddress.TextChanged += txtAddress_TextChanged;
             // 
             // label4
             // 
@@ -129,7 +139,7 @@
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(154, 312);
+            btnEdit.Location = new Point(132, 388);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(89, 26);
             btnEdit.TabIndex = 9;
@@ -139,7 +149,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(276, 312);
+            btnSave.Location = new Point(284, 388);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(95, 26);
             btnSave.TabIndex = 10;
@@ -147,23 +157,12 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
-            // btnBooking
-            // 
-            btnBooking.Location = new Point(369, 396);
-            btnBooking.Name = "btnBooking";
-            btnBooking.Size = new Size(93, 38);
-            btnBooking.TabIndex = 11;
-            btnBooking.Text = "Booking";
-            btnBooking.UseVisualStyleBackColor = true;
-            btnBooking.Click += btnBooking_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDark;
             panel1.BackgroundImageLayout = ImageLayout.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(txtCustomerName);
-            panel1.Controls.Add(btnBooking);
             panel1.Controls.Add(btnEdit);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btnSave);
@@ -189,6 +188,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "CUSTOMER_PROFILE";
             Text = "CUSTOMER_PROFILE";
+            Load += CUSTOMER_PROFILE_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -207,7 +207,6 @@
         private Label label4;
         private Button btnEdit;
         private Button btnSave;
-        private Button btnBooking;
         private Panel panel1;
     }
 }

@@ -48,29 +48,31 @@ namespace FINAL_CAR
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            CustomerSession.CustomerName = txtCustomerName.Text;
+            CustomerSession.Contact = txtContact.Text;
+            CustomerSession.Email = txtEmail.Text;
+            CustomerSession.Address = txtAddress.Text;
             decimal totalAmount = CalculateTotalAmount();
             txtAmount.Text = totalAmount.ToString("0.00");
 
 
             _paymentForm.AddPaymentRow(
-        txtCustomerName.Text,
-        txtContact.Text,
-        txtEmail.Text,
-        txtAddress.Text,
-        comboCar.Text,
-        (int)numericDays.Value,
-        datePickup.Value.ToShortDateString(),
-        dateTime.Value.ToShortTimeString(),
-        totalAmount
-    );
+         txtCustomerName.Text,
+         txtContact.Text,
+         txtEmail.Text,
+         txtAddress.Text,
+         comboCar.Text,
+         (int)numericDays.Value,
+         datePickup.Value.ToShortDateString(),
+         dateTime.Value.ToShortTimeString(),
+         totalAmount
+     );
 
             MessageBox.Show(
-                "Booking confirmed!\nCheck the Payment tab.",
+                "Booking confirmed!\nProfile updated automatically.",
                 "Success",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
-                
-                 
             );
         }
 
