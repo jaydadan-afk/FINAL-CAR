@@ -43,8 +43,7 @@ namespace FINAL_CAR
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog(); openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png"; if (openFileDialog.ShowDialog() == DialogResult.OK) { pictureBoxLicense.Image = Image.FromFile(openFileDialog.FileName); }
-
+           
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -70,6 +69,8 @@ namespace FINAL_CAR
                 "Success",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
+                
+                 
             );
         }
 

@@ -72,7 +72,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(56, 547);
             button1.Name = "button1";
             button1.Size = new Size(83, 30);
             button1.TabIndex = 8;
@@ -85,7 +85,7 @@
             btnProfile.FlatAppearance.BorderSize = 0;
             btnProfile.FlatStyle = FlatStyle.Flat;
             btnProfile.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnProfile.Location = new Point(0, 209);
+            btnProfile.Location = new Point(0, 273);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(197, 58);
             btnProfile.TabIndex = 7;
@@ -98,7 +98,7 @@
             btnPayment.FlatAppearance.BorderSize = 0;
             btnPayment.FlatStyle = FlatStyle.Flat;
             btnPayment.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPayment.Location = new Point(0, 273);
+            btnPayment.Location = new Point(0, 209);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(197, 58);
             btnPayment.TabIndex = 6;
@@ -115,7 +115,7 @@
             btnBooking.Name = "btnBooking";
             btnBooking.Size = new Size(197, 58);
             btnBooking.TabIndex = 5;
-            btnBooking.Text = "My Booking";
+            btnBooking.Text = "Booking";
             btnBooking.UseVisualStyleBackColor = true;
             btnBooking.Click += btnBooking_Click;
             // 

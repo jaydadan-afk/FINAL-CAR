@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            btnAdd = new Button();
             dgvPayment = new DataGridView();
-            btnEdit = new Button();
-            panel1 = new Panel();
-            btnConfirmPayment = new Button();
             colName = new DataGridViewTextBoxColumn();
             colContact = new DataGridViewTextBoxColumn();
             colEmail = new DataGridViewTextBoxColumn();
@@ -44,6 +40,9 @@
             colTime = new DataGridViewTextBoxColumn();
             colAmount = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
+            btnEdit = new Button();
+            panel1 = new Panel();
+            btnConfirmPayment = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPayment).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -58,16 +57,6 @@
             label1.TabIndex = 0;
             label1.Text = "PAYMENT";
             label1.Click += label1_Click;
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(483, 468);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(96, 40);
-            btnAdd.TabIndex = 37;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
             // 
             // dgvPayment
             // 
@@ -85,34 +74,6 @@
             dgvPayment.Size = new Size(843, 357);
             dgvPayment.TabIndex = 38;
             dgvPayment.CellContentClick += dgvPayment_CellContentClick;
-            // 
-            // btnEdit
-            // 
-            btnEdit.Location = new Point(350, 468);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(96, 40);
-            btnEdit.TabIndex = 39;
-            btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = true;
-            btnEdit.Click += btnEdit_Click;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(dgvPayment);
-            panel1.Location = new Point(132, 75);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(804, 355);
-            panel1.TabIndex = 41;
-            // 
-            // btnConfirmPayment
-            // 
-            btnConfirmPayment.Location = new Point(745, 468);
-            btnConfirmPayment.Name = "btnConfirmPayment";
-            btnConfirmPayment.Size = new Size(96, 40);
-            btnConfirmPayment.TabIndex = 42;
-            btnConfirmPayment.Text = "Confirm";
-            btnConfirmPayment.UseVisualStyleBackColor = true;
-            btnConfirmPayment.Click += btnConfirmPayment_Click;
             // 
             // colName
             // 
@@ -166,6 +127,34 @@
             Status.Name = "Status";
             Status.ReadOnly = true;
             // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(608, 468);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(96, 40);
+            btnEdit.TabIndex = 39;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(dgvPayment);
+            panel1.Location = new Point(132, 75);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(804, 355);
+            panel1.TabIndex = 41;
+            // 
+            // btnConfirmPayment
+            // 
+            btnConfirmPayment.Location = new Point(745, 468);
+            btnConfirmPayment.Name = "btnConfirmPayment";
+            btnConfirmPayment.Size = new Size(96, 40);
+            btnConfirmPayment.TabIndex = 42;
+            btnConfirmPayment.Text = "Confirm";
+            btnConfirmPayment.UseVisualStyleBackColor = true;
+            btnConfirmPayment.Click += btnConfirmPayment_Click;
+            // 
             // CUSTOMER_PAYMENT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,7 +164,6 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(btnEdit);
-            Controls.Add(btnAdd);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CUSTOMER_PAYMENT";
             Text = "CUSTOMER_PAYMENT";
@@ -189,7 +177,6 @@
         #endregion
 
         private Label label1;
-        private Button btnAdd;
         private DataGridView dgvPayment;
         private Button btnEdit;
         private Panel panel1;

@@ -125,12 +125,12 @@ namespace FINAL_CAR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             new Form1().Show();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
-        {
+        { 
             sideBarTimer.Start();
         }
     }

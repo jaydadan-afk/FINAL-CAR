@@ -15,44 +15,81 @@ namespace FINAL_CAR
         public CUSTOMER_PROFILE()
         {
             InitializeComponent();
-            txtCustomerName.ReadOnly = true;
-            txtContact.ReadOnly = true;
-            txtEmail.ReadOnly = true;
-            txtAddress.ReadOnly = true;
+
+         
+            SetProfileReadOnly(true);
         }
-        private void SetTextBoxesReadOnly(bool isReadOnly)
+
+
+        private void SetProfileReadOnly(bool isReadOnly)
         {
             txtCustomerName.ReadOnly = isReadOnly;
-            txtContact.ReadOnly = isReadOnly;
+            txtNumber.ReadOnly = isReadOnly;
             txtEmail.ReadOnly = isReadOnly;
             txtAddress.ReadOnly = isReadOnly;
+
+            btnSave.Enabled = !isReadOnly;
         }
+
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            SetTextBoxesReadOnly(false);
-            btnSave.Enabled = true;
-            btnEdit.Enabled = false;
+            SetProfileReadOnly(false);
+
+            MessageBox.Show(
+                "You can now update your profile.",
+                "Edit Profile",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SetTextBoxesReadOnly(true);
-            btnSave.Enabled = false;
-            btnEdit.Enabled = true;
+            if (string.IsNullOrWhiteSpace(txtCustomerName.Text) ||
+                string.IsNullOrWhiteSpace(txtNumber.Text))
+            {
+                MessageBox.Show(
+                    "Customer Name and Contact are required.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
 
-            MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SetProfileReadOnly(true);
+
+            MessageBox.Show(
+                "Profile updated successfully.",
+                "Success",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show(
+                "Redirecting to Booking / Payment page...",
+                "Navigation",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
-
 }
