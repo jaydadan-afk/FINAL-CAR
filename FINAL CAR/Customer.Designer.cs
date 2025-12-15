@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             Slidebar = new Panel();
+            button1 = new Button();
             btnProfile = new Button();
             btnPayment = new Button();
             btnBooking = new Button();
@@ -43,7 +44,6 @@
             iconClose = new PictureBox();
             sideBarTimer = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
-            button1 = new Button();
             Slidebar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconMaximize).BeginInit();
@@ -69,6 +69,16 @@
             Slidebar.Size = new Size(197, 650);
             Slidebar.TabIndex = 0;
             Slidebar.Paint += Slidebar_Paint;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 30);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnProfile
             // 
@@ -156,6 +166,7 @@
             btnMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMenu.TabIndex = 2;
             btnMenu.TabStop = false;
+            btnMenu.Click += btnMenu_Click;
             // 
             // iconRestorer
             // 
@@ -203,16 +214,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1103, 608);
             panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 30);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Customer
             // 

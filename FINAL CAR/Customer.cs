@@ -11,8 +11,14 @@ using System.Windows.Forms;
 
 namespace FINAL_CAR
 {
+
     public partial class Customer : Form
+
     {
+
+        private CUSTOMER_PAYMENT paymentForm;
+        private CUSTOMER_BOOKING bookingForm;
+
         bool sidebarExpand = true;
         public Customer()
         {
@@ -80,19 +86,19 @@ namespace FINAL_CAR
         private void AbrirFormInPanel(Form formHijo)
         {
             panel1.Controls.Clear();
-
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
-
             panel1.Controls.Add(formHijo);
-            panel1.Tag = formHijo;
             formHijo.Show();
         }
         private void btnPayment_Click(object sender, EventArgs e)
         {
 
-            AbrirFormInPanel(new CUSTOMER_PAYMENT());
+            if (paymentForm == null || paymentForm.IsDisposed)
+                paymentForm = new CUSTOMER_PAYMENT();
+
+            AbrirFormInPanel(paymentForm);
 
         }
 
@@ -103,7 +109,13 @@ namespace FINAL_CAR
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new CUSTOMER_BOOKING());
+            if (paymentForm == null || paymentForm.IsDisposed)
+                paymentForm = new CUSTOMER_PAYMENT();
+
+            if (bookingForm == null || bookingForm.IsDisposed)
+                bookingForm = new CUSTOMER_BOOKING(paymentForm);
+
+            AbrirFormInPanel(bookingForm);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -113,8 +125,13 @@ namespace FINAL_CAR
 
         private void button1_Click(object sender, EventArgs e)
         {
-                this.Hide();
+            this.Hide();
             new Form1().Show();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sideBarTimer.Start();
         }
     }
 }
