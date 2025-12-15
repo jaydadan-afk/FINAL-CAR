@@ -12,11 +12,20 @@ namespace FINAL_CAR
 {
     public partial class CUSTOMER_PROFILE : Form
     {
+     
         public CUSTOMER_PROFILE()
         {
             InitializeComponent();
+            this.Load += CUSTOMER_PROFILE_Load;
+            SetProfileReadOnly(true);
+        }
+        private void CUSTOMER_PROFILE_Load(object sender, EventArgs e)
+        {
+            txtCustomerName.Text = CustomerSession.CustomerName;
+            txtNumber.Text = CustomerSession.Contact;
+            txtEmail.Text = CustomerSession.Email;
+            txtAddress.Text = CustomerSession.Address;
 
-         
             SetProfileReadOnly(true);
         }
 
@@ -71,25 +80,31 @@ namespace FINAL_CAR
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnBooking_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "Redirecting to Booking / Payment page...",
-                "Navigation",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
 
         }
+
+
+
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
