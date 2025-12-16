@@ -12,9 +12,29 @@ namespace FINAL_CAR
 {
     public partial class CUSTOMERS : Form
     {
+
+        public void LoadAdminCustomers()
+        {
+            var bookings = JsonHelper.Load<BookingRecord>("bookings.json");
+
+            dgvCustomer.DataSource = null;
+            dgvCustomer.DataSource = bookings;
+        }
+
+
         public CUSTOMERS()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CUSTOMERS_Load(object sender, EventArgs e)
+        {
+            LoadAdminCustomers();
         }
     }
 }

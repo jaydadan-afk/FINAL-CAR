@@ -54,10 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(156, 9);
             label1.Name = "label1";
-            label1.Size = new Size(102, 29);
+            label1.Size = new Size(125, 29);
             label1.TabIndex = 0;
             label1.Text = "BOOKING";
             // 
@@ -267,6 +267,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "CUSTOMER_BOOKING";
             Text = "CUSTOMER_BOOKING";
+            Activated += CUSTOMER_BOOKING_Activated;
             Load += CUSTOMER_BOOKING_Load;
             ((System.ComponentModel.ISupportInitialize)numericDays).EndInit();
             ResumeLayout(false);

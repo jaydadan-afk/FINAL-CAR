@@ -12,6 +12,10 @@ namespace FINAL_CAR
 {
     public partial class Admin : Form
     {
+        
+
+
+
         bool sidebarExpand = true;
         public Admin()
         {
@@ -102,11 +106,6 @@ namespace FINAL_CAR
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new CUSTOMERS());
-        }
-
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new PAYMENTS());
         }
 
         private void button1_Click(object sender, EventArgs e)
