@@ -92,14 +92,14 @@ namespace FINAL_CAR
             panel1.Controls.Add(formHijo);
             formHijo.Show();
         }
-        private void btnPayment_Click(object sender, EventArgs e)
+      private void btnPayment_Click(object sender, EventArgs e)
         {
 
             if (paymentForm == null || paymentForm.IsDisposed)
                 paymentForm = new CUSTOMER_PAYMENT();
 
+  
             AbrirFormInPanel(paymentForm);
-
         }
 
         private void btnVehicle_Click(object sender, EventArgs e)

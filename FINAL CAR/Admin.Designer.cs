@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             Slidebar = new Panel();
             btnLogout = new Button();
-            btnPayment = new Button();
             btnBooking = new Button();
             btnCustomer = new Button();
             btnVehicle = new Button();
@@ -57,7 +56,6 @@
             // 
             Slidebar.BackColor = Color.RosyBrown;
             Slidebar.Controls.Add(btnLogout);
-            Slidebar.Controls.Add(btnPayment);
             Slidebar.Controls.Add(btnBooking);
             Slidebar.Controls.Add(btnCustomer);
             Slidebar.Controls.Add(btnVehicle);
@@ -78,18 +76,6 @@
             btnLogout.Text = "LogOut";
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += button1_Click;
-            // 
-            // btnPayment
-            // 
-            btnPayment.FlatAppearance.BorderSize = 0;
-            btnPayment.FlatStyle = FlatStyle.Flat;
-            btnPayment.Location = new Point(9, 294);
-            btnPayment.Name = "btnPayment";
-            btnPayment.Size = new Size(188, 56);
-            btnPayment.TabIndex = 5;
-            btnPayment.Text = "Payment";
-            btnPayment.UseVisualStyleBackColor = true;
-            btnPayment.Click += btnPayment_Click;
             // 
             // btnBooking
             // 
@@ -232,6 +218,7 @@
             Controls.Add(Slidebar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";
             Load += Admin_Load;
             Slidebar.ResumeLayout(false);
@@ -247,7 +234,6 @@
         #endregion
 
         private Panel Slidebar;
-        private Button btnPayment;
         private Button btnBooking;
         private Button btnCustomer;
         private Button btnVehicle;

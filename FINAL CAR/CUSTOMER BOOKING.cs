@@ -16,7 +16,7 @@ namespace FINAL_CAR
     public partial class CUSTOMER_BOOKING : Form
     {
         private CUSTOMER_PAYMENT _paymentForm;
-        
+
         public string CustomerName { get; set; }
         public string Contact { get; set; }
         public string Email { get; set; }
@@ -43,37 +43,64 @@ namespace FINAL_CAR
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            // 1️⃣ Save customer info to session (temporary)
             CustomerSession.CustomerName = txtCustomerName.Text;
             CustomerSession.Contact = txtContact.Text;
             CustomerSession.Email = txtEmail.Text;
             CustomerSession.Address = txtAddress.Text;
+
+            // 2️⃣ Calculate total amount
             decimal totalAmount = CalculateTotalAmount();
             txtAmount.Text = totalAmount.ToString("0.00");
 
-
+            // 3️⃣ Send data to Payment form (existing behavior)
             _paymentForm.AddPaymentRow(
-         txtCustomerName.Text,
-         txtContact.Text,
-         txtEmail.Text,
-         txtAddress.Text,
-         comboCar.Text,
-         (int)numericDays.Value,
-         datePickup.Value.ToShortDateString(),
-         dateTime.Value.ToShortTimeString(),
-         totalAmount
-     );
+                txtCustomerName.Text,
+                txtContact.Text,
+                txtEmail.Text,
+                txtAddress.Text,
+                comboCar.Text,
+                (int)numericDays.Value,
+                datePickup.Value.ToShortDateString(),
+                dateTime.Value.ToShortTimeString(),
+                totalAmount
+            );
 
+            // 4️⃣ LOAD existing bookings from JSON
+            List<BookingRecord> bookings =
+                JsonHelper.Load<BookingRecord>("bookings.json");
+
+            // 5️⃣ CREATE new booking record
+            BookingRecord record = new BookingRecord
+            {
+                CustomerName = txtCustomerName.Text,
+                Contact = txtContact.Text,
+                Email = txtEmail.Text,
+                Address = txtAddress.Text,
+                CarType = comboCar.Text,
+                RentedDays = (int)numericDays.Value,
+                PickupDate = datePickup.Value.ToShortDateString(),
+                PickupTime = dateTime.Value.ToShortTimeString(),
+                TotalAmount = totalAmount,
+                Status = "Pending"
+            };
+
+            // 6️⃣ SAVE booking to JSON
+            bookings.Add(record);
+            JsonHelper.Save("bookings.json", bookings);
+
+            // 7️⃣ Success message
             MessageBox.Show(
-                "Booking confirmed!\nProfile updated automatically.",
+                "Booking confirmed and saved to JSON!",
                 "Success",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
-            );
+                    );
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
@@ -154,6 +181,11 @@ namespace FINAL_CAR
         }
 
         private void datePickup_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CUSTOMER_BOOKING_Activated(object sender, EventArgs e)
         {
 
         }

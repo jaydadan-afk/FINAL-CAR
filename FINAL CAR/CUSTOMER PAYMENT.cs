@@ -1,128 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FINAL_CAR
 {
     public partial class CUSTOMER_PAYMENT : Form
     {
-        public void AddPaymentRow(
-    string name,
-    string contact,
-    string email,
-    string address,
-    string car,
-    int days,
-    string date,
-    string time,
-    decimal amount)
-        {
-            dgvPayment.Rows.Add(
-     name,
-     contact,
-     email,
-     address,
-     car,
-     days,
-     date,
-     time,
-     amount.ToString("0.00"),
-     "Unpaid"
- );
-        }
-
         bool sidebarExpand = true;
 
         public CUSTOMER_PAYMENT()
         {
             InitializeComponent();
+            dgvPayment.AutoGenerateColumns = true;
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        public void AddPaymentRow(
+            string name,
+            string contact,
+            string email,
+            string address,
+            string car,
+            int days,
+            string date,
+            string time,
+            decimal amount)
         {
-            if (dgvPayment.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Select a row to edit.");
-                return;
-            }
-
-            if (dgvPayment.SelectedRows[0].Cells["Status"].Value.ToString() == "Paid")
-            {
-                MessageBox.Show("Paid records cannot be edited.");
-                return;
-            }
-
-            MessageBox.Show("Edit logic goes here.");
-
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void LoadPaymentsFromJson()
         {
-
-        }
-
-
-
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
+            var bookings = JsonHelper.Load<BookingRecord>("bookings.json");
+            dgvPayment.DataSource = null;
+            dgvPayment.DataSource = bookings;
         }
 
         private void CUSTOMER_PAYMENT_Load_1(object sender, EventArgs e)
         {
+            LoadPaymentsFromJson();
+        }
 
+        private void CUSTOMER_PAYMENT_Shown(object sender, EventArgs e)
+        {
+            LoadPaymentsFromJson();
+        }
+
+        private void CUSTOMER_PAYMENT_Activated(object sender, EventArgs e)
+        {
+            LoadPaymentsFromJson();
         }
 
         private void btnConfirmPayment_Click(object sender, EventArgs e)
         {
             if (dgvPayment.CurrentRow == null)
             {
-                MessageBox.Show("Please select a booking to confirm payment.",
-                                "No Selection",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a booking.");
                 return;
             }
 
-            DataGridViewRow row = dgvPayment.CurrentRow;
+            int index = dgvPayment.CurrentRow.Index;
+            var bookings = JsonHelper.Load<BookingRecord>("bookings.json");
 
-            if (row.Cells["Status"].Value.ToString() == "Paid")
+            if (bookings[index].Status == "Paid")
             {
-                MessageBox.Show("This booking is already paid.",
-                                "Info",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                MessageBox.Show("This booking is already paid.");
                 return;
             }
 
-            DialogResult result = MessageBox.Show(
-                "Confirm payment for this booking?",
-                "Payment Confirmation",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            if (MessageBox.Show("Confirm payment?", "Confirm",
+                MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
 
-            if (result == DialogResult.Yes)
-            {
-                row.Cells["Status"].Value = "Paid";
+            bookings[index].Status = "Paid";
+            JsonHelper.Save("bookings.json", bookings);
+            LoadPaymentsFromJson();
 
-                MessageBox.Show("Payment successfully confirmed!",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
+            MessageBox.Show("Payment confirmed.");
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvPayment.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a booking.");
+                return;
+            }
+
+            int index = dgvPayment.CurrentRow.Index;
+
+            if (MessageBox.Show("Delete this booking?", "Delete",
+                MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
+            var bookings = JsonHelper.Load<BookingRecord>("bookings.json");
+            bookings.RemoveAt(index);
+            JsonHelper.Save("bookings.json", bookings);
+            LoadPaymentsFromJson();
+
+            MessageBox.Show("Booking deleted.");
+        }
+
         private void dgvPayment_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
-
 }
